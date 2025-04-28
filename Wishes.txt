@@ -1,0 +1,2 @@
+WISH1 W102 "Lego Set" "Price:150TL, Brand:LEGO"
+WISH2 W103 "Cinema Visit" "Price:100TL" 2025-04-20 13:00 2025-04-20 15:00
