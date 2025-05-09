@@ -3,7 +3,6 @@ public class Parent extends User {
         super(userId);
     }
 
-    // Görevleri yönetmek için eklenen metot
     public void manageTasks(Task task) {
         System.out.println("Parent " + userId + " is managing task: " + task.getTaskName());
     }

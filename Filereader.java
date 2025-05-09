@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Filereader {
-    // Komutları dosyadan okur ve liste olarak döndürür
+
     public List<String> readCommands(String filename) {
         List<String> commands = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -19,7 +19,6 @@ public class Filereader {
         return commands;
     }
 
-    // Görevleri dosyaya yazar
     public void writeTasks(String filename, List<Task> tasks) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
             for (Task task : tasks) {
@@ -31,7 +30,6 @@ public class Filereader {
         }
     }
 
-    // Dilekleri dosyaya yazar
     public void writeWishes(String filename, List<Wish> wishes) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
             for (Wish wish : wishes) {

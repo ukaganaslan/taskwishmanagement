@@ -37,7 +37,7 @@ public class Task {
         return endTime;
     }
 
-    public String getStatus() {  // BU METODU EKLEDİM
+    public String getStatus() { 
         return status;
     }
 

@@ -73,7 +73,6 @@ public class TaskWishManagement {
         }
     }
 
-    // Çocuğa puan (coin) ekler
     private void addBudgetCoin(String[] parts) {
         if (parts.length < 2) {
             System.out.println("Error: Missing amount for ADD_BUDGET_COIN.");
@@ -88,12 +87,10 @@ public class TaskWishManagement {
         }
     }
 
-    // Takvim görünümünü gösterir
     private void showCalendar() {
         CalendarView.showCalendar(tasks, wishes);
     }
 
-    // Görevleri listeler
     private void listAllTasks() {
         System.out.println("Listing all tasks:");
         for (Task task : tasks) {
@@ -101,7 +98,6 @@ public class TaskWishManagement {
         }
     }
 
-    // Dilekleri listeler
     private void listAllWishes() {
         System.out.println("Listing all wishes:");
         for (Wish wish : wishes) {
@@ -109,7 +105,6 @@ public class TaskWishManagement {
         }
     }
 
-    // Görevi tamamlar
     private void completeTask(String[] parts) {
         if (parts.length < 2) {
             System.out.println("Error: Missing task name for TASK_DONE.");
@@ -127,7 +122,6 @@ public class TaskWishManagement {
         System.out.println("Error: Task not found: " + taskName);
     }
 
-    // Görevi kontrol eder
     private void checkTask(String[] parts) {
         if (parts.length < 3) {
             System.out.println("Error: Missing task name or rating for TASK_CHECKED.");
@@ -152,7 +146,6 @@ public class TaskWishManagement {
         }
     }
 
-    // Dileği kontrol eder
     private void checkWish(String[] parts) {
         if (parts.length < 3) {
             System.out.println("Error: Missing wish name or status for WISH_CHECKED.");
@@ -177,14 +170,13 @@ public class TaskWishManagement {
         System.out.println("Error: Wish not found: " + wishName);
     }
 
-    // Komutları çift tırnak içindeki metinleri birleştirerek ayırır
     private String[] parseCommand(String commandLine) {
         List<String> parts = new ArrayList<>();
         Matcher matcher = Pattern.compile("\"[^\"]*\"|\\S+").matcher(commandLine);
         while (matcher.find()) {
             String part = matcher.group();
             if (part.startsWith("\"") && part.endsWith("\"")) {
-                parts.add(part.substring(1, part.length() - 1)); // Çift tırnakları kaldır
+                parts.add(part.substring(1, part.length() - 1));
             } else {
                 parts.add(part);
             }

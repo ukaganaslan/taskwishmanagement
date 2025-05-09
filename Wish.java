@@ -35,7 +35,6 @@ public class Wish {
         this.level = level;
     }
 
-    // ✅ Başlangıç ve bitiş zamanları için getter metodları eklendi
     public LocalDateTime getStartTime() {
         return startTime;
     }
